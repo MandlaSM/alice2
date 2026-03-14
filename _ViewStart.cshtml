@@ -1,0 +1,32 @@
+@{
+    ViewData["Title"] = "Home";
+}
+
+<section class="hero card">
+    <div class="hero-copy">
+        <span class="pill">Training platform</span>
+        <h1>ALICE Training in C#</h1>
+        <p class="lead">This Milestone 1 version keeps the clean, simple feel of your PHP training system while moving the platform to ASP.NET Core MVC with SQLite.</p>
+        <div class="hero-actions">
+            <a asp-controller="Account" asp-action="Login" class="btn">Sign in</a>
+            <a asp-controller="Account" asp-action="Register" class="btn ghost">Create account</a>
+        </div>
+        <p class="muted mt">Demo learner: learner@alice.local / Learner123!</p>
+        <p class="muted">Demo admin: admin@alice.local / Admin123!</p>
+    </div>
+</section>
+
+<section class="grid top-gap">
+    <article class="card">
+        <h3>Dashboard</h3>
+        <p>A learner dashboard with enrolled courses, completion counts, and progress bars.</p>
+    </article>
+    <article class="card">
+        <h3>Courses and lessons</h3>
+        <p>Structured course pages, module groupings, lesson content, and simple next-step navigation.</p>
+    </article>
+    <article class="card">
+        <h3>Progress tracking</h3>
+        <p>Each lesson can be marked complete and contributes to the learner's progress status.</p>
+    </article>
+</section>

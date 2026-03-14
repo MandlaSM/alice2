@@ -1,0 +1,41 @@
+@model RegisterViewModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<div class="auth-wrap">
+    <section class="card auth-card">
+        <h1>Create your account</h1>
+        <p class="lead">This keeps the registration flow simple for Milestone 1.</p>
+
+        <form asp-action="Register" method="post" class="form">
+            @Html.AntiForgeryToken()
+            <div asp-validation-summary="ModelOnly" class="flash error"></div>
+
+            <label asp-for="FullName"></label>
+            <input asp-for="FullName" />
+            <span asp-validation-for="FullName" class="field-error"></span>
+
+            <label asp-for="Email"></label>
+            <input asp-for="Email" />
+            <span asp-validation-for="Email" class="field-error"></span>
+
+            <label asp-for="Password"></label>
+            <input asp-for="Password" />
+            <span asp-validation-for="Password" class="field-error"></span>
+
+            <label asp-for="ConfirmPassword"></label>
+            <input asp-for="ConfirmPassword" />
+            <span asp-validation-for="ConfirmPassword" class="field-error"></span>
+
+            <div class="top-gap-sm">
+                <button type="submit" class="btn">Register</button>
+                <a asp-action="Login" class="btn ghost">Back to login</a>
+            </div>
+        </form>
+    </section>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
